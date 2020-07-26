@@ -22,8 +22,15 @@ const SmallCard = ({ blog }) => {
       <div className="card-body">
         <section>
           <Link href={`/blogs/${blog.slug}`}>
-            <a>
-              <h5 className="card-title">{blog.title}</h5>
+            <a style={{ textDecoration: "none" }}>
+              <h5
+                className="card-title"
+                style={{
+                  color: "#74153B",
+                }}
+              >
+                {blog.title}
+              </h5>
             </a>
           </Link>
           <div className="card-text">{renderHTML(blog.excerpt)}</div>
@@ -33,7 +40,9 @@ const SmallCard = ({ blog }) => {
       <div className="card-body">
         Posted {moment(blog.updatedAt).fromNow()} by{" "}
         <Link href={`/profile/${blog.postedBy.username}`}>
-          <a>{blog.postedBy.username}</a>
+          <a style={{ textDecoration: "none", color: "#74153B" }}>
+            {blog.postedBy.username}
+          </a>
         </Link>
       </div>
     </div>

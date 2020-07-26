@@ -18,7 +18,7 @@ const Blogs = ({
 }) => {
   const head = () => (
     <Head>
-      <title>Programming blogs | {APP_NAME}</title>
+      <title>Brana Yoga, info for a happier life! | {APP_NAME}</title>
       <meta
         name="description"
         content="BranaYoga offers blogs and information to live happier and healthier"
@@ -71,8 +71,8 @@ const Blogs = ({
     return (
       size > 0 &&
       size >= limit && (
-        <button onClick={loadMore} className="btn btn-outline-primary btn-lg">
-          Load mmore
+        <button onClick={loadMore} className="btn btn-outline-info btn-lg">
+          Load more
         </button>
       )
     );
@@ -93,7 +93,7 @@ const Blogs = ({
   const showAllCategories = () => {
     return categories.map((c, i) => (
       <Link href={`/categories/${c.slug}`} key={i}>
-        <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
+        <a className="btn btn-info mr-1 ml-1 mt-3">{c.name}</a>
       </Link>
     ));
   };
@@ -101,7 +101,7 @@ const Blogs = ({
   const showAllTags = () => {
     return tags.map((t, i) => (
       <Link href={`/tags/${t.slug}`} key={i}>
-        <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-outline-info mr-1 ml-1 mt-3">{t.name}</a>
       </Link>
     ));
   };
@@ -122,7 +122,12 @@ const Blogs = ({
           <div className="container-fluid">
             <header>
               <div className="col-md-12 pt-3">
-                <h1 className="display-4 font-weight-bold text-center">
+                <h1
+                  className="display-4 font-weight-bold text-center"
+                  style={{
+                    color: "DarkGray",
+                  }}
+                >
                   Brana Yoga Blogs
                 </h1>
               </div>

@@ -44,7 +44,7 @@ const Search = () => {
           return (
             <div key={i}>
               <Link href={`/blogs/${blog.slug}`}>
-                <a className="text-primary">{blog.title}</a>
+                <a className="text-info">{blog.title}</a>
               </Link>
             </div>
           );
@@ -66,7 +66,7 @@ const Search = () => {
         </div>
 
         <div className="col-md-4">
-          <button className="btn btn-block btn-outline-primary" type="submit">
+          <button className="btn btn-block btn-outline-info" type="submit">
             Search
           </button>
         </div>

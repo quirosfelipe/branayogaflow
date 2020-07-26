@@ -33,7 +33,7 @@ const LoginGoogle = () => {
         buttonText="Login with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
-        theme="dark"
+        theme="light"
       />
     </div>
   );
