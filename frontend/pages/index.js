@@ -18,7 +18,9 @@ const Index = () => {
             className="front"
             style={{
               backgroundImage:
-                "url(" + "https://i.postimg.cc/0NzFmhfn/branayoga.png" + ")",
+                "url(" +
+                "https://i.postimg.cc/MZjBz3d1/Brana-Yoga-Purpple.png" +
+                ")",
             }}
           ></div>
         </a>
