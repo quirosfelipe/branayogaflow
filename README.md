@@ -29,6 +29,17 @@ Branayoga is a full-featured role-based yoga blog organized by self-contained ca
 -   JavaScript, HTML and CSS
 
 
+## Developing with Next.js 
+For develping Brana Yoga I choose Next.js since it is a framework for developing production-grade React applications that can scale. It  allows developers to write server-rendered React apps easily and uses JavaScript as Node.js and React.js. Also, with this framewrok all the pages either static or dynamic are SEO (Search Engine Optimized.
+
+ #### What happens behind the curtains?
+Next.js decides if the page can be served as a dynamic page or a static page which does not need to make requests to the backend. It prefetches the pages automatically so when the home page (which is static) is loaded other pages of the site are prefetched behind the scene (this was made possible with the use of the Link component.)
+
+The main difference I encountered was reagrding routing and a lifecycle methods. This was solved by incoporating "getInitialProps"  which makes the server-side rendring possible.
+[
+![Screen-Shot-2020-07-27-at-12-07-52-PM.png](https://i.postimg.cc/8cJbwbkf/Screen-Shot-2020-07-27-at-12-07-52-PM.png)](https://postimg.cc/SY48xCMm)
+
+
 ## Writing a blog
 [![Screen-Shot-2020-07-27-at-10-57-12-AM.png](https://i.postimg.cc/GmrdrXNb/Screen-Shot-2020-07-27-at-10-57-12-AM.png)](https://postimg.cc/2VHP77rt)
 
