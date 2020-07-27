@@ -36,11 +36,13 @@ Writing a blog is one of the main functionalities of the BranaYoga app.
 The tool selected for the code of the app is react-quill. This allows for semantic mark-up and standardized html to concede auth users the ability of easy blog creation.
 During the creation of a blog users can upload a featured image for the it besides being able to add categories and tags.
 
+## # Minimalist and simple UI
+Brana yoga features a super intuitive user-friendly interface and  sticks heavily to the color palette to allow users to remember the app and reference it . The css and styles are levereaged mainly on reactstrap with a few custom tweaks to it.
+[![Whats-App-Image-2020-07-13-at-5-44-03-PM.jpg](https://i.postimg.cc/jS8BWTvd/Whats-App-Image-2020-07-13-at-5-44-03-PM.jpg)](https://postimg.cc/BjKmyddd)
 ## # Planned Feature Components
 
 -    Implement sendgrid API to handle email notifications.
 -   Forgot password functionality
 -   Metatags inclusion for SEO improvement.
-
 
 
