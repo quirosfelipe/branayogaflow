@@ -8,7 +8,7 @@ import { getCategories } from "../../actions/category";
 import { getTags } from "../../actions/tag";
 import { createBlog } from "../../actions/blog";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-import "../../node_modules/react-quill/dist/quill.snow.css";
+// import "../../node_modules/react-quill/dist/quill.snow.css";
 import { QuillModules, QuillFormats } from "../../helpers/quill";
 
 const CreateBlog = ({ router }) => {
