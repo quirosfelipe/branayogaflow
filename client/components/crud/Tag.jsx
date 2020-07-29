@@ -38,7 +38,7 @@ const Tag = () => {
           onDoubleClick={() => deleteConfirm(t.slug)}
           title="Double click to delete"
           key={i}
-          className="btn btn-outline-primary mr-1 ml-1 mt-3"
+          className="btn btn-outline-info mr-1 ml-1 mt-3"
         >
           {t.name}
         </button>
@@ -81,9 +81,9 @@ const Tag = () => {
         setValues({
           ...values,
           error: false,
-          success: false,
+          success: true,
           name: "",
-          removed: !removed,
+          removed: false,
           reload: !reload,
         });
       }
