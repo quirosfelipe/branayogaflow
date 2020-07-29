@@ -273,5 +273,8 @@ exports.googleLogin = (req, res) => {
           error: "Google login failed. Try again.",
         });
       }
+    })
+    .catch((error) => {
+      console.log(error);
     });
 };

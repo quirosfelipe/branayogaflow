@@ -5,6 +5,11 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 // const path = require("path");
+const next = require("next");
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
+
 require("dotenv").config();
 // bring routes
 const blogRoutes = require("./routes/blog");
@@ -15,41 +20,49 @@ const tagRoutes = require("./routes/tag");
 const formRoutes = require("./routes/form");
 
 // app
-const app = express();
+// const app = express();
 
-// db
-mongoose
-  .connect(process.env.MONGODB_URI || process.env.DATABASE_LOCAL, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("DB connected"))
-  .catch((err) => {
-    console.log(err);
+// routes middleware
+app.prepare().then(() => {
+  const server = express();
+  //db
+  mongoose
+    .connect(process.env.MONGODB_URI || process.env.DATABASE_LOCAL, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    })
+    .then(() => console.log("DB connected"))
+    .catch((err) => {
+      console.log(err);
+    });
+
+  // middlewares
+  server.use(morgan("dev"));
+  server.use(bodyParser.json());
+  server.use(cookieParser());
+  // cors
+
+  if (process.env.NODE_ENV === "production") {
+    server.use(cors({ origin: `${process.env.CLIENT_URL}` }));
+  }
+
+  server.use("/api", blogRoutes);
+  server.use("/api", authRoutes);
+  server.use("/api", userRoutes);
+  server.use("/api", categoryRoutes);
+  server.use("/api", tagRoutes);
+  server.use("/api", formRoutes);
+
+  server.all("*", (req, res) => {
+    return handle(req, res);
   });
 
-// middlewares
-app.use(morgan("dev"));
-app.use(bodyParser.json());
-app.use(cookieParser());
-// cors
+  // port
+  const port = process.env.PORT || 8000;
 
-if (process.env.NODE_ENV === "production") {
-  app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
-  app.use(express.static("client/.next"));
-}
-// routes middleware
-app.use("/api", blogRoutes);
-app.use("/api", authRoutes);
-app.use("/api", userRoutes);
-app.use("/api", categoryRoutes);
-app.use("/api", tagRoutes);
-app.use("/api", formRoutes);
-
-// port
-const port = process.env.PORT || 8000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  server.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
 });
