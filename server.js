@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
+// const path = require("path");
 require("dotenv").config();
 // bring routes
 const blogRoutes = require("./routes/blog");
@@ -18,7 +19,7 @@ const app = express();
 
 // db
 mongoose
-  .connect(process.env.DATABASE_LOCAL, {
+  .connect(process.env.MONGODB_URI || process.env.DATABASE_LOCAL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
@@ -34,8 +35,10 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 // cors
-if (process.env.NODE_ENV === "development") {
+
+if (process.env.NODE_ENV === "production") {
   app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
+  app.use(express.static("client/.next"));
 }
 // routes middleware
 app.use("/api", blogRoutes);
