@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5f15d3bdbfe30c268c9af384"},"name":"Yoga en español","slug":"yoga-en-espanol","createdAt":{"$date":"2020-07-20T17:26:21.818Z"},"updatedAt":{"$date":"2020-07-20T17:26:21.818Z"},"__v":0}
+{"_id":{"$oid":"5f1dbd4c8d09055df9d9f491"},"name":"Yoga Practice","slug":"yoga-practice","createdAt":{"$date":"2020-07-26T17:28:44.854Z"},"updatedAt":{"$date":"2020-07-26T17:28:44.854Z"},"__v":0}
+{"_id":{"$oid":"5f1dbd608d09055df9d9f492"},"name":"Lifestyle","slug":"lifestyle","createdAt":{"$date":"2020-07-26T17:29:04.575Z"},"updatedAt":{"$date":"2020-07-26T17:29:04.575Z"},"__v":0}
+{"_id":{"$oid":"5f1dbd648d09055df9d9f493"},"name":"Food","slug":"food","createdAt":{"$date":"2020-07-26T17:29:08.085Z"},"updatedAt":{"$date":"2020-07-26T17:29:08.085Z"},"__v":0}
+{"_id":{"$oid":"5f1dbd688d09055df9d9f494"},"name":"Asanas","slug":"asanas","createdAt":{"$date":"2020-07-26T17:29:12.283Z"},"updatedAt":{"$date":"2020-07-26T17:29:12.283Z"},"__v":0}
