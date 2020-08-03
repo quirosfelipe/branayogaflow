@@ -6,7 +6,7 @@ module.exports = withCSS({
     APP_NAME: "BRANA YOGA",
     API_DEVELOPMENT: "http://localhost:8000/api",
     API_PRODUCTION: "https://branayoga.herokuapp.com/api",
-    PRODUCTION: false,
+    PRODUCTION: true,
     DOMAIN_DEVELOPMENT: "http://localhost:3000",
     DOMAIN_PRODUCTION: "https://branayoga.herokuapp.com",
     FB_APP_ID: process.env.FB_APP_ID,
