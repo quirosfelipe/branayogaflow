@@ -6,7 +6,7 @@ const expressJwt = require("express-jwt");
 const _ = require("lodash");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 const { OAuth2Client } = require("google-auth-library");
-const sgMail = require("@sendgrid/mail"); // SENDGRID_API_KEY
+const sgMail = require("@sendgrid/mail"); // SENDGRID_API_KEY2 is brana
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.signup = (req, res) => {
