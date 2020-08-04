@@ -42,6 +42,7 @@ const Tag = ({ tag, blogs, query }) => {
 
   return (
     <React.Fragment>
+      {/* {console.log("in the tag", blogs)} */}
       {head()}
       <Layout>
         <main>

@@ -20,7 +20,7 @@ const Card = ({ blog }) => {
 
   return (
     <div>
-      {!!blog && !!blog.postedBy && !!blog.postedBy.username && (
+      {!!blog && !!blog.postedBy && (
         <div className="lead pb-4">
           <header>
             <Link href={`/blogs/${blog.slug}`}>
@@ -38,14 +38,14 @@ const Card = ({ blog }) => {
           </header>
           <section>
             <p className="mark ml-1 pt-2 pb-2">
-              Written by {console.log("blog and postedBy", blog, blog.postedBy)}
+              Written by{" "}
               {!!blog && !!blog.postedBy && !!blog.postedBy.username && (
                 <Link href={`/profile/${blog.postedBy.username}`}>
                   <a style={{ textDecoration: "none", color: "#74153B" }}>
                     {blog.postedBy.username}
                   </a>
                 </Link>
-              )}
+              )}{" "}
               | Published {moment(blog.updatedAt).fromNow()}
             </p>
           </section>

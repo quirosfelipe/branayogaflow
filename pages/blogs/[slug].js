@@ -112,11 +112,17 @@ const SingleBlog = ({ blog, query }) => {
                   </h1>
                   <p className="lead mt-3 mark">
                     Written by{" "}
-                    <Link href={`/profile/${blog.postedBy.username}`}>
-                      <a style={{ textDecoration: "none", color: "#74153B" }}>
-                        {blog.postedBy.username}
-                      </a>
-                    </Link>{" "}
+                    {!!blog &&
+                      !!blog.postedBy &&
+                      !!blog.postedBy.username && (
+                        <Link href={`/profile/${blog.postedBy.username}`}>
+                          <a
+                            style={{ textDecoration: "none", color: "#74153B" }}
+                          >
+                            {blog.postedBy.username}
+                          </a>
+                        </Link>
+                      )}{" "}
                     | Published {moment(blog.updatedAt).fromNow()}
                   </p>
 

@@ -28,7 +28,7 @@ const UserIndex = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-md-8">right</div>
+            {/* <div className="col-md-8">right</div> */}
           </div>
         </div>
       </Private>
