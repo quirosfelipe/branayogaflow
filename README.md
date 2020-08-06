@@ -1,9 +1,9 @@
 # Branayoga
 Branayoga is a full-featured role-based yoga blog organized by self-contained categories and tags.
-Visit the live site [here.](https://branayoga.herokuapp.com/)
+> Visit the live site [here.](https://branayoga.herokuapp.com/)
 #### Login as a demo user
-email: demo@user.com,
-password: Pass1234
+ - [ ] email: demo@user.com
+ - [ ] password: Pass1234
 
 # Key Features
 
