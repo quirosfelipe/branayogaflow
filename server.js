@@ -26,7 +26,7 @@ const formRoutes = require("./routes/form");
 app.prepare().then(() => {
   const server = express();
   //db
-  mongoose
+  mongoose // atlas database set up
     .connect(process.env.MONGODB_URI || process.env.DATABASE, {
       useNewUrlParser: true,
       useCreateIndex: true,
