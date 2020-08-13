@@ -5,10 +5,10 @@ module.exports = withCSS({
   publicRuntimeConfig: {
     APP_NAME: "BRANA YOGA",
     API_DEVELOPMENT: "http://localhost:8000/api",
-    API_PRODUCTION: "https://branayoga.herokuapp.com/api",
+    API_PRODUCTION: "https://branayoga-app.herokuapp.com/api",
     PRODUCTION: true,
     DOMAIN_DEVELOPMENT: "http://localhost:3000",
-    DOMAIN_PRODUCTION: "https://branayoga.herokuapp.com",
+    DOMAIN_PRODUCTION: "https://branayoga-app.herokuapp.com",
     FB_APP_ID: process.env.FB_APP_ID,
     DISQUS_SHORTNAME: process.env.DISQUS_SHORTNAME,
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
