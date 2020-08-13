@@ -27,7 +27,7 @@ app.prepare().then(() => {
   const server = express();
   //db
   mongoose
-    .connect(process.env.MONGODB_URI || process.env.DATABASE_LOCAL, {
+    .connect(process.env.MONGODB_URI || process.env.DATABASE, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
