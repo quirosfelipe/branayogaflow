@@ -40,6 +40,7 @@ const Header = () => {
             style={{
               color: "#74153B",
               fontSize: "large",
+              cursor: "pointer",
             }}
           >
             {APP_NAME}
@@ -51,13 +52,13 @@ const Header = () => {
             <React.Fragment>
               <NavItem>
                 <Link href="/blogs">
-                  <NavLink>Blogs</NavLink>
+                  <NavLink style={{ cursor: "pointer" }}>Blogs</NavLink>
                 </Link>
               </NavItem>
 
               <NavItem>
                 <Link href="/contact">
-                  <NavLink>Contact</NavLink>
+                  <NavLink style={{ cursor: "pointer" }}>Contact</NavLink>
                 </Link>
               </NavItem>
             </React.Fragment>
@@ -66,12 +67,12 @@ const Header = () => {
               <React.Fragment>
                 <NavItem>
                   <Link href="/signin">
-                    <NavLink>Signin</NavLink>
+                    <NavLink style={{ cursor: "pointer" }}>Signin</NavLink>
                   </Link>
                 </NavItem>
                 <NavItem>
                   <Link href="/signup">
-                    <NavLink>Signup</NavLink>
+                    <NavLink style={{ cursor: "pointer" }}>Signup</NavLink>
                   </Link>
                 </NavItem>
               </React.Fragment>
@@ -80,7 +81,9 @@ const Header = () => {
             {isAuth() && isAuth().role === 0 && (
               <NavItem>
                 <Link href="/user">
-                  <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+                  <NavLink style={{ cursor: "pointer" }}>{`${
+                    isAuth().name
+                  }'s Dashboard`}</NavLink>
                 </Link>
               </NavItem>
             )}
@@ -88,7 +91,9 @@ const Header = () => {
             {isAuth() && isAuth().role === 1 && (
               <NavItem>
                 <Link href="/admin">
-                  <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+                  <NavLink style={{ cursor: "pointer" }}>{`${
+                    isAuth().name
+                  }'s Dashboard`}</NavLink>
                 </Link>
               </NavItem>
             )}

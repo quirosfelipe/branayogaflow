@@ -9,7 +9,7 @@ db-> local_db
 host-> primary cluster 
 username, passqord -> created for cluster
 
-mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/users.json --jsonArray --authenticationDatabase admin --ssl --username branayoga --password brana12****
-mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/users.json  --authenticationDatabase admin --ssl --username branayoga --password brana12****
-mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/blogs.json  --authenticationDatabase admin --ssl --username branayoga --password brana12****
-mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/tags.json  --authenticationDatabase admin --ssl --username branayoga --password brana12****
+mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/users.json  --authenticationDatabase admin --ssl --username branay** --password brana12****
+mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/blogs.json  --authenticationDatabase admin --ssl --username branay** --password brana12****
+mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/tags.json  --authenticationDatabase admin --ssl --username branay** --password brana12****
+mongoimport --host branayoga-shard-*****.eahoc.mongodb.net:27017 --db BranaYoga --type json --file ~/Desktop/categories.json  --authenticationDatabase admin --ssl --username branay** --password brana12****

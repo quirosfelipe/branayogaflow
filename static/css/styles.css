@@ -16,16 +16,15 @@ html * {
   object-fit: cover;
 }
 
-.front {
+.home-image {
   position: relative;
-  /* top: 10px; */
-  /* margin-right: 2px;
-  margin-bottom: 1em; */
   width: 100%;
-  height: 810px;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  /* background: #ffffff; */
-  /* border-radius: 10px; */
+  height: auto;
+  object-fit: cover !important ;
+  background-size: fill !important;
+}
+
+.on-hover:hover {
+  filter: invert(47%) sepia(95%) saturate(366%) hue-rotate(140deg)
+    brightness(92%) contrast(102%);
 }

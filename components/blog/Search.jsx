@@ -60,7 +60,7 @@ const Search = () => {
           <input
             type="search"
             className="form-control"
-            placeholder="Search blogs"
+            placeholder="Search for a keyword like food or asana..."
             onChange={handleChange}
           />
         </div>
