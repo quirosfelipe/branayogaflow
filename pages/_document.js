@@ -26,6 +26,25 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+
+          <title>Brana Yoga </title>
+          <base target="_blank" rel="noopener noreferrer" />
+          <meta
+            name="description"
+            content="Brana Yoga. Best yoga info for a happier and healthier life."
+          />
+          <meta property="og:type" content="Website" />
+          <meta
+            name="image"
+            property="og:image"
+            content="https://i.postimg.cc/0NzFmhfn/branayoga.png"
+          />
+          <meta
+            name="description"
+            property="og:description"
+            content="Brana Yoga. Connect breath with movement."
+          />
+
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
